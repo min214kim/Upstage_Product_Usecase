@@ -4,8 +4,8 @@ numpy>=1.24.0
 
 # # LangChain and Upstage
 langchain>=0.1.17
-langchain-core>=0.1.50
-langchain-community>=0.0.25
+langchain-core>=0.1.52
+langchain-community>=0.0.38
 langchain-upstage>=0.0.20
 
 # Vector DB
@@ -13,3 +13,8 @@ faiss-cpu>=1.7.4
 
 # Email support
 secure-smtplib
+
+
+langchain>=0.1.17
+langchain-core>=0.1.52
+langchain-community>=0.0.38
