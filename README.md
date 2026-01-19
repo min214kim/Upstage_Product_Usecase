@@ -22,10 +22,16 @@ Designed to be accessible to anyone with a basic understanding of Python and API
 This project is provided for educational and research purposes.
 
 ---
+---
 
 # 📘 Product UseCase: Counseling Record Analysis & Alert Automation System
 
 🔗 [Live Demo Link](https://upstage-usecase-ybigta.streamlit.app/)
+
+Note on Live Demo: The live demo is currently offline due to the expiration of the API key and service maintenance. 
+
+For a detailed view of the system's operation, please refer to the [**6. How to Use**](#-6-how-to-use) section below.
+
 
 ## 📌 Table of Contents
 - [Overview](#-1-overview)

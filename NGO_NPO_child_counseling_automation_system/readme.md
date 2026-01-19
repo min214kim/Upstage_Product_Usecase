@@ -2,6 +2,10 @@
 
 🔗 [Live Demo Link](https://upstage-usecase-ybigta.streamlit.app/)
 
+Note on Live Demo: The live demo is currently offline due to the expiration of the API key and service maintenance. 
+
+For a detailed view of the system's operation, please refer to the [**6. How to Use**](#-6-how-to-use) section below.
+
 ## 📌 Table of Contents
 - [📘 Product UseCase: Counseling Record Analysis \& Alert Automation System](#-product-usecase-counseling-record-analysis--alert-automation-system)
   - [📌 Table of Contents](#-table-of-contents)
