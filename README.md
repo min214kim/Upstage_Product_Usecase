@@ -172,7 +172,7 @@ The source code structure of this project is as follows, provided for developmen
 🔗 [Direct Link to Project](https://upstage-usecase-ybigta.streamlit.app/)
 
 ### PDF Upload
-![Upload PDF](./images/pdf업로드.gif)
+![Upload PDF](./NGO_NPO_child_counseling_automation_system/images/pdf업로드.gif)
 - After accessing the service URL, drag and drop the counseling record PDF file to be analyzed into the file upload window at the bottom of the screen, or select it manually.
 - Once the upload is complete, the progress from parsing, preprocessing, summarization, similar case search, to classification will be displayed.
 
@@ -182,18 +182,18 @@ The source code structure of this project is as follows, provided for developmen
 **1. Current Session Summary**
 - A summary of the client's profile, key issues, living environment, abuse status, emergency level, and comprehensive assessment is displayed.
 - Click "View Original Text" to check the full text.
-![Session Summary](./images/결과1.gif)
+![Session Summary](./NGO_NPO_child_counseling_automation_system/images/결과1.gif)
 
 **2. View Past Similar Cases**
 - Detailed information on 3 similar cases based on AI-Hub data can be reviewed.
 - Click the "View Counseling Content/Information by Question" toggle to see the full content of the similar cases.
-![Past Similar Cases](./images/결과2.gif)
+![Past Similar Cases](./NGO_NPO_child_counseling_automation_system/images/결과2.gif)
 
 **3. View Risk Analysis & Send Email Notification**
 - You can check the severity level and abuse type categorized for the session.
 - If determined as high-risk, a risk notification email can be sent to the person in charge.
 - For guidance on sending emails, please refer to the sidebar on the left side of the screen.
-![Risk Analysis & Email Sender](./images/결과3.gif)
+![Risk Analysis & Email Sender](./NGO_NPO_child_counseling_automation_system/images/결과3.gif)
 
 ---
 ## 📦 7. Dependencies
