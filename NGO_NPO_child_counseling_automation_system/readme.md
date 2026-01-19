@@ -3,109 +3,26 @@
 🔗 [Live Demo Link](https://upstage-usecase-ybigta.streamlit.app/)
 
 ## 📌 Table of Contents
-- [Overview](#-1-overview)
-- [Usecase Scenario](#-2-usecase-scenario)
-- [Features](#-3-features)
-- [Project Structure](#-4-project-structure)
-- [Installation & Execution](#-5-installation--execution)
-- [How to Use](#-6-how-to-use)
-- [Dependencies](#-7-dependencies)
-- [API Description](#-8-api-description)
-- [Sample Output](#-9-sample-output)
-- [Limitations & Notes](#-10-limitations--notes)
-- [Contributors](#-11-contributors)
----
-
-## 📜 1. Overview
-
-> This project aims to **optimize counseling record management for non-profit organizations (NPOs)**. By uploading counseling records in PDF format, the system automatically structures the documents and summarizes key points. Furthermore, it analyzes the type of counseling and crisis levels, recommending similar past cases to reduce administrative burden and support rapid response to emergency situations.
-
-### Key Needs Addressed:
-1. **Unorganized Records**: Difficulty in searching and analyzing due to fragmented handwritten or PDF documents.
-2. **High-Risk Case Detection**: High labor costs for manually identifying critical keywords related to suicide or violence.
-3. **Inefficient Case Sharing**: Time-consuming manual search for similar past cases for reference.
-
-### Tech Stack:
-![Upstage](https://img.shields.io/badge/Upstage_API-0A0A0A?style=for-the-badge&logo=upstage&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) 
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white) 
-![LangChain](https://img.shields.io/badge/LangChain-6442D9?style=for-the-badge&logo=langchain&logoColor=white) 
-![FAISS](https://img.shields.io/badge/FAISS-4B83DE?style=for-the-badge&logo=facebook&logoColor=white)
-
----
-
-## 🎬 2. Usecase Scenario
-> When a case manager at a child counseling center uploads a PDF summary of a session, the system provides the following analysis on the dashboard within seconds:
-
-1. **Auto-Summarization**: Summarizes information into client details, key issues, living environment, abuse assessment, emergency level, and overall opinion.
-2. **Crisis Classification**: Categorizes the type (e.g., 'Physical Abuse') and determines the severity level.
-3. **Similar Case Recommendation**: Suggests the top 3 similar past cases from the AI-Hub counseling database to help establish a response plan.
-4. **Emergency Alert**: Automatically sends an email alert to the person in charge if high-risk signs like 'abuse' are detected.
-
----
-
-## ✨ 3. Features
-### Main Features
-- **📄 Document Parsing**: Extracts text and structure from PDFs via **Upstage Document AI API**.
-- **✨ Text Cleaning**: Anonymizes sensitive personal data (names, schools) to protect privacy.
-- **📝 AI Summarization**: Uses **Upstage Solar LLM** to summarize long counseling logs effectively.
-- **🏷️ AI Classification**: Automatically classifies 'Counseling Type', 'Crisis Level', and 'Abuse Type'.
-- **🔍 Retrieval**: Searches for similar cases within the FAISS vector DB populated with historical datasets.
-- **🚨 Alerting**: Sends email notifications to designated managers if the crisis level exceeds a certain threshold.
-
-### Functional Specifications
-<details>
-<summary><strong>⚙️ View Pipeline Specifications </strong></summary>
-
-- **System Build Pipeline**
-
-| # | Module | Description | Input | Output | Note |
-| - | ------------------ | ----------------- | ------- | ----------- | --------------------- |
-| 1 | AI-Hub Data Loader | Loads AI-Hub datasets | \*.json | Raw Text | |
-| 2 | Text Clean & Anon | Masking names/schools/etc. | Raw Text | Clean Text | |
-| 3 | Solar Embedding | Vectorizes counseling content | Clean Text | Vector | Upstage Embedding API |
-| 4 | Vector DB Build | Searchable DB construction | Vector + Meta | faiss.index | |
-
-- **User Flow Pipeline**
-
-| # | Module | Description | Input | Output | Note |
-| - | ---------------- | ------------------------- | ------ | ------------ | -------------- |
-| 1 | PDF Upload | User uploads counseling log | PDF | File Path | |
-| 2 | Document Parse | OCR + Structuring | PDF | HTML Text | Upstage API |
-| 3 | Text Clean & Anon | Preprocessing & Anonymization | Text | Clean Text | |
-| 4 | Solar LLM Summary | Summarizing core content | Clean Text | Summary | |
-| 5 | Solar Embedding | Creating embedding vectors | Clean Text | Vector | |
-| 6 | Similar Search | Retrieval of 3 cases via FAISS | Vector | Case List | |
-| 7 | Solar LLM Classify | Classification of type/level | Clean Text | Results (JSON)| |
-| 8 | Risk Alert | Email if Level≥3 or Abuse≠None | Results | Mail Log | |
-| 9 | Dashboard | Visualization of results | All | Web Page | Streamlit |
-
-</details>
-
----
-
-## 📂 4. Project Structure
-
-네, 바로 복사해서 README.md 파일에 붙여넣으실 수 있도록 코드 블록으로 정리해 드립니다.
-
-Markdown
-
-# 📘 Product UseCase: Counseling Record Analysis & Alert Automation System
-
-🔗 [Live Demo Link](https://upstage-usecase-ybigta.streamlit.app/)
-
-## 📌 Table of Contents
-- [Overview](#-1-overview)
-- [Usecase Scenario](#-2-usecase-scenario)
-- [Features](#-3-features)
-- [Project Structure](#-4-project-structure)
-- [Installation & Execution](#-5-installation--execution)
-- [How to Use](#-6-how-to-use)
-- [Dependencies](#-7-dependencies)
-- [API Description](#-8-api-description)
-- [Sample Output](#-9-sample-output)
-- [Limitations & Notes](#-10-limitations--notes)
-- [Contributors](#-11-contributors)
+- [📘 Product UseCase: Counseling Record Analysis \& Alert Automation System](#-product-usecase-counseling-record-analysis--alert-automation-system)
+  - [📌 Table of Contents](#-table-of-contents)
+  - [📜 1. Overview](#-1-overview)
+    - [Key Needs Addressed:](#key-needs-addressed)
+    - [Tech Stack:](#tech-stack)
+  - [🎬 2. Usecase Scenario](#-2-usecase-scenario)
+  - [✨ 3. Features](#-3-features)
+    - [Main Features](#main-features)
+    - [Functional Specifications](#functional-specifications)
+  - [📂 4. Project Structure](#-4-project-structure)
+  - [🚀 5. Installation \& Execution](#-5-installation--execution)
+  - [📖 6. How to Use](#-6-how-to-use)
+    - [PDF Upload](#pdf-upload)
+    - [Check Results](#check-results)
+  - [📦 7. Dependencies](#-7-dependencies)
+  - [🔌 8. API Description](#-8-api-description)
+  - [🎯 9. Sample Output (Screenshots)](#-9-sample-output-screenshots)
+  - [⚠️ 10. Limitations \& Notes](#️-10-limitations--notes)
+  - [🧑‍🤝‍🧑 11. Contributors / License](#-11-contributors--license)
+    - [Contributors](#contributors)
 
 ---
 
